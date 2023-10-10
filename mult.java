@@ -1,5 +1,6 @@
+package lab3;
 import java.util.Scanner;
-public class mult {
+public class Mult {
 
 	public static void main(String[] args) {
 		int i, j;
@@ -11,21 +12,15 @@ public class mult {
 		
 		System.out.println("Enter the number of rows and columns of Matrix 2");
 		
-		int row2 = arr.nextInt();
-		int col2 = arr.nextInt();
+		//int row2 = arr.nextInt();
+		//int col2 = arr.nextInt();
 		
 		//System.out.println("The number of rows is "+row +" and columns is "+col);
 		
 		int array1[][]= new int[row1][col1];
-		int array2[][]= new int[row2][col2];
+		int array2[][]= new int[row1][col1];
 		int sum[][]= new int[row1][col1];
 		
-		if(row1!=col2)
-		{
-			System.out.println("Matrix Multiplication will not occur.");
-		}
-
-		else{
 		
 		System.out.println("Enter the elements of Array 1:");
 	for(i=0;i<row1;i++)
@@ -37,9 +32,9 @@ public class mult {
 	}
 	
 		System.out.println("Enter the elements of Array 2:");
-	for(i=0;i<row2;i++)
+	for(i=0;i<row1;i++)
 	{
-		for(j=0;j<col2;j++)
+		for(j=0;j<col1;j++)
 		{
 			array2[i][j] = arr.nextInt();	
 		}
@@ -56,7 +51,7 @@ public class mult {
 			sum[i][j] = sum[i][j] + array1[i][k] * 	array2[k][j];
 		}
 	}}
-
+	
 	
 	
 	for(i=0;i<row1;i++)
@@ -64,10 +59,10 @@ public class mult {
 		for(j=0;j<col1;j++)
 		{
 		System.out.print(sum[i][j]);
-		System.out.print(" ");
-
+		System.out.print("");
 		}
 	}
 	}
-	}
 }
+
+	

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
     
  import java.util.Scanner;
+=======
+package lab3;
+
+import java.util.Scanner;
+>>>>>>> 74d25b5e1d6c13922d1c7a43214c71a5b997dcd3
 
 public class frequency {
 
@@ -20,7 +26,12 @@ public class frequency {
 		
 		for(i=0;i<x;i++)
 		{
+<<<<<<< HEAD
 			if(s2==s1.charAt(i))
+=======
+			//if(s2==s1.charAt(i))
+			if(s2.equalsIgnoreCase(s1.charAt[i])==0)
+>>>>>>> 74d25b5e1d6c13922d1c7a43214c71a5b997dcd3
 			{
 				count++;
 			}
@@ -30,4 +41,7 @@ public class frequency {
 	}
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74d25b5e1d6c13922d1c7a43214c71a5b997dcd3
