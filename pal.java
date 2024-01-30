@@ -1,37 +1,36 @@
-package lab3;
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
-public class pal {
-
-	public static void main(String[] args) {
-		int i;
-		Scanner arr = new Scanner(System.in);
-			System.out.println("Enter the String:");
-
-			String s1 = arr.nextLine();
-			
-			
-			char[] ch = s1.toCharArray();
-			int x = s1.length();
-			
-			String y =""; 
-			
-			for (i=x-1;i>=0;i--)
-			{
-				y = y+s1.charAt(i);
-				
-			}
-			
-			if (s1.equalsIgnoreCase(y))
-			{
-				System.out.println("It is a Palindrome.");
-			}
-			
-			else
-			{
-				System.out.println("It is not a Palindrome.");
-			}
-
-	}
-
+class palindrome
+{
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        System.out.println("Enter the String: ");
+        String s = scan.nextLine().toLowerCase();
+        char[] arr = new char[10];
+        arr = s.toCharArray();
+        int len = s.length();
+        System.out.print("You entered: ");
+        for(int i=0;i<len;i++)
+        {
+            System.out.print(arr[i]);
+        }
+        int flag=0;
+        for(int i=0;i<len;i++)
+        {   int j=len-1-i;
+            
+                if(arr[i]!=arr[j])
+                {
+                    flag++;
+                }
+        }
+        System.out.println("");
+        if(flag==0)
+        {
+            System.out.println(" The String is Palindrome");
+        }
+        else{
+            System.out.println("The string is not Palindrome");
+        }
+    }
 }
